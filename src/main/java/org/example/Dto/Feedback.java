@@ -15,4 +15,6 @@ public class Feedback {
     private String rating;
     private String comment;
     private Date date;
+    private Integer eventId;
+    private Integer attendeeId;
 }

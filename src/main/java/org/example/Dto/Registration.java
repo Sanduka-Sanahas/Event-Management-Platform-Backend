@@ -14,4 +14,6 @@ public class Registration {
     private Long id;
     private Date date;
     private String status;
+    private Integer eventId;
+    private Integer attendeeId;
 }

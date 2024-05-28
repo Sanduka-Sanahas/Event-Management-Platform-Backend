@@ -17,4 +17,6 @@ public class Event {
     private String location;
     private String description;
     private String category;
+    private Integer organizerId;
+    private Integer categoryId;
 }

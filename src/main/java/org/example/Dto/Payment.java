@@ -15,4 +15,5 @@ public class Payment {
     private String amount;
     private Date date;
     private String status;
+    private Integer registrationId;
 }
