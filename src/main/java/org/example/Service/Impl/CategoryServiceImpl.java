@@ -30,4 +30,15 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryEntity> getAllCategory() {
         return repository.findAll();
     }
+
+    @Override
+    public boolean deleteCategory(Long id) {
+        if (repository.existsById(id)){
+
+            repository.deleteById(id);
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

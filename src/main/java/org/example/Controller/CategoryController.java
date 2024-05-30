@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.Dto.Category;
 import org.example.Entity.CategoryEntity;
 import org.example.Service.CategoryService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,5 +27,12 @@ public class CategoryController {
     public Iterable<CategoryEntity> getAll(){
 
         return service.getAllCategory();
+    }
+
+    @DeleteMapping("/delete-category/{id}")
+    public ResponseEntity<String> deleteCategory(@PathVariable Long id){
+
+        return service.deleteCategory(id) ? ResponseEntity.ok("Deleted")
+                : ResponseEntity.notFound().build();
     }
 }

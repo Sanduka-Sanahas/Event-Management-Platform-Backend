@@ -23,4 +23,11 @@ public class EventEntity {
     private String description;
     private String category;
 
+    @ManyToOne
+    @JoinColumn(name = "organizer_id")
+    private OrganizerEntity organizerId;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity categoryId;
 }
